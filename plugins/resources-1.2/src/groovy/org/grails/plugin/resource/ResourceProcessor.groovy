@@ -802,7 +802,12 @@ class ResourceProcessor implements InitializingBean {
             }
         }
         
-        modules.each { m -> defineModuleFromBuilder(m, batch) }
+        modules.each {    m ->
+            println "MM==="+ "-" * 20
+            println m
+            println "-" * 20
+            defineModuleFromBuilder(m, batch)
+        }
         
         updateDependencyOrder()
         
@@ -1226,3 +1231,4 @@ Resource tags that add content to that disposition.""")
     }
     
 }
+
